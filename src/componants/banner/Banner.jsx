@@ -27,9 +27,9 @@ const Banner = () => {
        
         <SwiperSlide>
           <div className="relative">
-            <img className="w-full h-[700px] object-cover " src={mountain} alt="Mountain" />
+            <img className="md:w-full h-[580px]  md:h-[700px] object-cover " src={mountain} alt="Mountain" />
             <div className="absolute  inset-0  flex-col justify-center items-start p-8 text-white bg-gradient-to-t from-black/50 via-black/10 to-transparent">
-            <div className='w-6/12 pl-20 mt-14'>
+            <div className=' md:w-8/12 lg:w-6/12 lg:pl-20 mt-14'>
             <span className="bg-black/30 text-xs text-white px-3 py-1 rounded-full">Adventure</span>
               <h1 className="text-4xl md:text-6xl font-bold mt-4">
                 Let's Explore Heaven Together
@@ -37,7 +37,7 @@ const Banner = () => {
               <button className="mt-6 px-6 py-3 bg-black/50 text-white font-semibold rounded-full shadow-lg flex items-center gap-2 backdrop-blur-sm">
                 Explore More <span className="text-2xl"><IoIosArrowRoundForward /></span>
               </button>
-              <p className='mt-6 px-6 py-3 bg-black/50 text-white  shadow-lg flex items-center backdrop-blur-sm rounded-xl'>"Embark on a journey where adventure meets tranquility. Our expertly curated travel experiences are designed to help you explore breathtaking landscapes, from majestic mountains to serene forests and starlit skies. Whether you seek adrenaline-pumping thrills or peaceful escapes, we provide everything you need to turn your vacation into an unforgettable story. Let us take you closer to nature, one extraordinary destination at a time."</p>
+              <p className='hidden lg:flex mt-6 px-6 py-3 bg-black/50 text-white  shadow-lg items-center backdrop-blur-sm rounded-xl'>"Embark on a journey where adventure meets tranquility. Our expertly curated travel experiences are designed to help you explore breathtaking landscapes, from majestic mountains to serene forests and starlit skies. Whether you seek adrenaline-pumping thrills or peaceful escapes, we provide everything you need to turn your vacation into an unforgettable story. Let us take you closer to nature, one extraordinary destination at a time."</p>
             </div>
             </div>
             <div className="absolute bottom-10 right-10 bg-white/20 backdrop-blur-lg rounded-2xl p-6 shadow-lg w-72">
@@ -56,9 +56,9 @@ const Banner = () => {
        
         <SwiperSlide>
           <div className="relative">
-            <img className="w-full h-[700px] object-cover " src={forestSnow} alt="Snowy Forest" />
+            <img className="md:w-full h-[580px]  md:h-[700px] object-cover " src={forestSnow} alt="Snowy Forest" />
             <div className="absolute  inset-0  flex-col justify-center items-start p-8 text-white bg-gradient-to-t from-black/50 via-black/10 to-transparent">
-            <div className='w-6/12 pl-20 mt-14'>
+            <div className='md:w-8/12 lg:w-6/12 lg:pl-20 mt-14'>
             <span className="bg-black/30 text-xs text-white px-3 py-1 rounded-full">Adventure</span>
               <h1 className="text-4xl md:text-6xl font-bold mt-4">
               Discover the Wonders of Snow
@@ -67,7 +67,7 @@ const Banner = () => {
               <button className="mt-6 px-6 py-3 bg-black/50 text-white font-semibold rounded-full shadow-lg flex items-center gap-2 backdrop-blur-sm">
                 Explore More <span className="text-2xl"><IoIosArrowRoundForward /></span>
               </button>
-              <p className='mt-6 px-6 py-3 bg-black/50 text-white  shadow-lg flex items-center backdrop-blur-sm rounded-xl'>"Embark on a journey where adventure meets tranquility. Our expertly curated travel experiences are designed to help you explore breathtaking landscapes, from majestic mountains to serene forests and starlit skies. Whether you seek adrenaline-pumping thrills or peaceful escapes, we provide everything you need to turn your vacation into an unforgettable story. Let us take you closer to nature, one extraordinary destination at a time."</p>
+              <p className='mt-6 px-6 py-3 bg-black/50 text-white  shadow-lg hidden lg:flex items-center backdrop-blur-sm rounded-xl'>"Embark on a journey where adventure meets tranquility. Our expertly curated travel experiences are designed to help you explore breathtaking landscapes, from majestic mountains to serene forests and starlit skies. Whether you seek adrenaline-pumping thrills or peaceful escapes, we provide everything you need to turn your vacation into an unforgettable story. Let us take you closer to nature, one extraordinary destination at a time."</p>
           
             </div>
             </div>
@@ -87,9 +87,9 @@ const Banner = () => {
        
         <SwiperSlide>
           <div className="relative">
-            <img className="w-full h-[700px] object-cover " src={forest} alt="Forest" />
+            <img className="md:w-full h-[580px]  md:h-[700px] object-cover " src={forest} alt="Forest" />
             <div className="absolute  inset-0  flex-col justify-center items-start p-8 text-white bg-gradient-to-t from-black/50 via-black/10 to-transparent">
-            <div className='w-6/12 pl-20 mt-14'>
+            <div className='md:w-8/12 lg:w-6/12 lg:pl-20 mt-14'>
             <span className="bg-black/30 text-xs text-white px-3 py-1 rounded-full">Adventure</span>
               <h1 className="text-4xl md:text-6xl font-bold mt-4">
               Breathe in the Forest Air
@@ -98,7 +98,7 @@ const Banner = () => {
                 Explore More <span className="text-2xl"><IoIosArrowRoundForward /></span>
               </button>
 
-              <p className='mt-6 px-6 py-3 bg-black/50 text-white  shadow-lg flex items-center backdrop-blur-sm rounded-xl'>"Embark on a journey where adventure meets tranquility. Our expertly curated travel experiences are designed to help you explore breathtaking landscapes, from majestic mountains to serene forests and starlit skies. Whether you seek adrenaline-pumping thrills or peaceful escapes, we provide everything you need to turn your vacation into an unforgettable story. Let us take you closer to nature, one extraordinary destination at a time."</p>
+              <p className='mt-6 px-6 py-3 bg-black/50 text-white  shadow-lg hiddenlg:flex items-center backdrop-blur-sm rounded-xl'>"Embark on a journey where adventure meets tranquility. Our expertly curated travel experiences are designed to help you explore breathtaking landscapes, from majestic mountains to serene forests and starlit skies. Whether you seek adrenaline-pumping thrills or peaceful escapes, we provide everything you need to turn your vacation into an unforgettable story. Let us take you closer to nature, one extraordinary destination at a time."</p>
             </div>
             </div>
             <div className="absolute bottom-10 right-10 bg-white/20 backdrop-blur-lg rounded-2xl p-6 shadow-lg w-72">
@@ -117,9 +117,9 @@ const Banner = () => {
       
         <SwiperSlide>
           <div className="relative">
-            <img className="w-full h-[700px] object-cover " src={night} alt="Night Sky" />
+            <img className="md:w-full h-[580px]  md:h-[700px] object-cover " src={night} alt="Night Sky" />
             <div className="absolute  inset-0  flex-col justify-center items-start p-8 text-white bg-gradient-to-t from-black/50 via-black/10 to-transparent">
-            <div className='w-6/12 pl-20 mt-14'>
+            <div className='md:w-8/12 lg:w-6/12 lg:pl-20 mt-14'>
             <span className="bg-black/30 text-xs text-white px-3 py-1 rounded-full">Adventure</span>
               <h1 className="text-4xl md:text-6xl font-bold mt-4">
               Experience Starry Nights
@@ -127,7 +127,7 @@ const Banner = () => {
               <button className="mt-6 px-6 py-3 bg-black/50 text-white font-semibold rounded-full shadow-lg flex items-center gap-2 backdrop-blur-sm">
                 Explore More <span className="text-2xl"><IoIosArrowRoundForward /></span>
               </button>
-              <p className='mt-6 px-6 py-3 bg-black/50 text-white  shadow-lg flex items-center backdrop-blur-sm rounded-xl'>"Embark on a journey where adventure meets tranquility. Our expertly curated travel experiences are designed to help you explore breathtaking landscapes, from majestic mountains to serene forests and starlit skies. Whether you seek adrenaline-pumping thrills or peaceful escapes, we provide everything you need to turn your vacation into an unforgettable story. Let us take you closer to nature, one extraordinary destination at a time."</p>
+              <p className='mt-6 px-6 py-3 bg-black/50 text-white  shadow-lg hidden lg:flex items-center backdrop-blur-sm rounded-xl'>"Embark on a journey where adventure meets tranquility. Our expertly curated travel experiences are designed to help you explore breathtaking landscapes, from majestic mountains to serene forests and starlit skies. Whether you seek adrenaline-pumping thrills or peaceful escapes, we provide everything you need to turn your vacation into an unforgettable story. Let us take you closer to nature, one extraordinary destination at a time."</p>
             </div>
             </div>
             <div className="absolute bottom-10 right-10 bg-white/20 backdrop-blur-lg rounded-2xl p-6 shadow-lg w-72">

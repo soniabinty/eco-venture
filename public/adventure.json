@@ -2,7 +2,7 @@
   {
     "id": 1,
     "adventureTitle": "Amazon Rainforest Trek",
-    "image": "https://example.com/images/amazon-trek.jpg",
+    "image": "https://i.ibb.co.com/0ZtHBNQ/Trekking-in-the-jungle.jpg",
     "categoryName": "Hiking",
     "shortDescription": "Explore the lush Amazon Rainforest with experienced guides.",
     "adventureCost": "$1200",
@@ -18,7 +18,7 @@
   {
     "id": 2,
     "adventureTitle": "Coral Reef Diving",
-    "image": "https://example.com/images/coral-diving.jpg",
+    "image": "https://i.ibb.co.com/bHT4S6Q/fiji-reef.jpg",
     "categoryName": "Diving",
     "shortDescription": "Dive into vibrant coral reefs and learn about marine conservation.",
     "adventureCost": "$600",
@@ -34,7 +34,7 @@
   {
     "id": 3,
     "adventureTitle": "Mountain Biking Adventure",
-    "image": "https://example.com/images/mountain-biking.jpg",
+    "image": "https://i.ibb.co.com/n8pdfFq/original.jpg",
     "categoryName": "Cycling",
     "shortDescription": "Cycle through breathtaking mountain trails and enjoy nature.",
     "adventureCost": "$400",
@@ -50,7 +50,7 @@
   {
     "id": 4,
     "adventureTitle": "Kayaking in Mangroves",
-    "image": "https://example.com/images/mangrove-kayaking.jpg",
+    "image": "https://i.ibb.co.com/4ZP3dby/kayak-tour-mangrove-tunnels.webp",
     "categoryName": "Kayaking",
     "shortDescription": "Paddle through serene mangroves and spot wildlife.",
     "adventureCost": "$250",
@@ -66,7 +66,7 @@
   {
     "id": 5,
     "adventureTitle": "Arctic Wildlife Expedition",
-    "image": "https://example.com/images/arctic-expedition.jpg",
+    "image": "https://i.ibb.co.com/4jsPVfv/eha8113.webp",
     "categoryName": "Wildlife Safari",
     "shortDescription": "Witness polar bears, seals, and arctic foxes in their natural habitat.",
     "adventureCost": "$3000",
@@ -82,7 +82,7 @@
   {
     "id": 6,
     "adventureTitle": "Safari in Serengeti",
-    "image": "https://example.com/images/serengeti-safari.jpg",
+    "image": "https://i.ibb.co.com/2hWLNCk/safari-serengeti-national-park.jpg",
     "categoryName": "Wildlife Safari",
     "shortDescription": "Experience the great migration and Africa's iconic wildlife.",
     "adventureCost": "$2000",
@@ -98,7 +98,7 @@
   {
     "id": 7,
     "adventureTitle": "Volcano Trekking",
-    "image": "https://example.com/images/volcano-trekking.jpg",
+    "image": "https://i.ibb.co.com/F8nTD4x/Mt-Ngauruhoe-New-Zealand-VISITCANOS0418-b108f8ebd32c44da9c1ca591cf22cdde.jpg",
     "categoryName": "Hiking",
     "shortDescription": "Conquer active volcano trails and witness breathtaking views.",
     "adventureCost": "$700",
@@ -114,7 +114,7 @@
   {
     "id": 8,
     "adventureTitle": "Eco Beach Cleanup",
-    "image": "https://example.com/images/beach-cleanup.jpg",
+    "image": "https://i.ibb.co.com/3CPv38N/edited-for-cms-coastal-cleanup-1608548899100.jpg",
     "categoryName": "Volunteer",
     "shortDescription": "Help clean beaches and protect marine life.",
     "adventureCost": "$50",
@@ -130,7 +130,7 @@
   {
     "id": 9,
     "adventureTitle": "Desert Stargazing Adventure",
-    "image": "https://example.com/images/stargazing.jpg",
+    "image": "https://i.ibb.co.com/XbFgfWH/2874101717360101.webp",
     "categoryName": "Camping",
     "shortDescription": "Camp under the stars in the vast desert landscape.",
     "adventureCost": "$300",
