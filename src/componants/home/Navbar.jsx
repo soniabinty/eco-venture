@@ -12,8 +12,8 @@ const {user , logOut} =useContext(AuthContext)
   return (
     
 
-     <div className='flex justify-between bg-cyan-100 w-11/12 mx-auto md:mt-10 mt-4 md:px-8 px-2 items-center rounded-t-2xl'>
-<h2>{}</h2>
+     <div className='flex justify-between w-11/12 mx-auto md:mt-6 mt-2 md:px-8 px-2 items-center rounded-t-2xl'>
+
       <div className='flex items-center'>
       <GiThreeLeaves className='text-green-800 md:text-4xl text-2xl' />
    
@@ -34,8 +34,13 @@ const {user , logOut} =useContext(AuthContext)
     <div className={`md:gap-8 flex max-sm:flex-col max-sm:absolute md:text-xl duration-100 right-4 max-sm:p-3 max-sm:bg-blue-300 max-sm:text-white max-sm:rounded-sm max-sm:z-50 ${open? 'top-12':'-top-60'}`}>
    <NavLink> Home</NavLink>
    <NavLink>Update Profile</NavLink>
+   {
+          user && user.email ? ( 
+            <NavLink onClick={logOut} className={'md:hidden'}>LogOut</NavLink>  ):( 
+   <NavLink  to={'/login'} className={'md:hidden'}>Login</NavLink>  )
+        }
   
-   <NavLink to={'/login'} className={'md:hidden'}>Login</NavLink>  
+ 
    <NavLink >My profile</NavLink>  
 </div>
       </div>
