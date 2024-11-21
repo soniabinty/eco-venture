@@ -9,18 +9,18 @@ const Experiences = () => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
  
-  const handleExplore = (id) =>{
+//   const handleExplore = (id) =>{
 
-    if(user){
-      navigate(`/adventure/${id}`)
-    } 
-    else{
+//     if(user){
+//       navigate(`/adventure/${id}`)
+//     } 
+//     else{
 
-navigate('/login')
+// navigate('/login')
 
-    }
+//     }
 
-  }
+//   }
 
   
 
@@ -39,7 +39,7 @@ navigate('/login')
    <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-8 gap-4 px-4">
   
       {adventures.map((adventure) => (
-        <Card key={adventure.id} adventure={adventure} handleExplore={handleExplore} />
+        <Card key={adventure.id} adventure={adventure}  />
       ))}
    </div>
     </div>

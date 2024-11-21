@@ -41,7 +41,7 @@ const {user , logOut} =useContext(AuthContext)
         }
   
  
-   <NavLink >My profile</NavLink>  
+   <NavLink to={'/myprofile'} >My profile</NavLink>  
 </div>
       </div>
 

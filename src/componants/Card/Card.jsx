@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Card = ({adventure ,handleExplore}) => {
+const Card = ({adventure }) => {
+
+
+  console.log(adventure)
   return (
     <div
    
@@ -29,9 +33,11 @@ const Card = ({adventure ,handleExplore}) => {
       </ul>
 
      
-      <button onClick={() => handleExplore(adventure.id)} className="mt-4 px-4 py-2 bg-blue-500 text-white font-medium rounded hover:bg-blue-600">
+    <div>
+    <Link to={`/adventure/${adventure.id}`} className="mt-4 px-4 py-2 bg-blue-500 text-white font-medium rounded hover:bg-blue-600">
         Explore Now
-      </button>
+      </Link>
+    </div>
     </div>
   </div>
   );

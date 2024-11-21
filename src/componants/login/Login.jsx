@@ -1,15 +1,20 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 
 const login = () => {
   const {userSignIn ,  setUser} = useContext(AuthContext)
+
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const handleSubmit =(e) =>{
     e.preventDefault()
     const form = new FormData(e.target)
        const email = form.get("email")
     const password = form.get("password")
+    const name = form.get("name")
+    const photo = form.get("photo")
 
 
     console.log({email , password})
@@ -17,7 +22,7 @@ const login = () => {
     .then((result) =>{
   const user = result.user
   setUser(user)
-  console.log(user)
+  navigate(location?.state ? location.state : "/");
   
     })
     .catch((error) => {
