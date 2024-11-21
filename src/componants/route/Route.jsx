@@ -22,6 +22,8 @@ const router = createBrowserRouter(
     path: "/",
     element: <Root></Root>,
 
+
+
     
     children:
     [
@@ -62,9 +64,6 @@ const router = createBrowserRouter(
 
 
 
-    {  path:"*",
-      element:<Error></Error>
-    },
     {  path:"/myprofile",
       element: <PrivateRoute>
      <MyProfile></MyProfile>
@@ -79,6 +78,10 @@ const router = createBrowserRouter(
     
       
     ]
+  },
+
+  {  path:"*",
+    element:<Error></Error>
   },
 
  

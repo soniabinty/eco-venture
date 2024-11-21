@@ -33,7 +33,7 @@ const Card = ({adventure }) => {
       </ul>
 
      
-    <div>
+    <div className='my-6'>
     <Link to={`/adventure/${adventure.id}`} className="mt-4 px-4 py-2 bg-blue-500 text-white font-medium rounded hover:bg-blue-600">
         Explore Now
       </Link>

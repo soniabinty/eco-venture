@@ -3,16 +3,16 @@ import { AuthContext } from '../../provider/AuthProvider';
 import { Link } from 'react-router-dom';
 
 const MyProfile = () => {
-  const { user } = useContext(AuthContext); // Fetch user data from AuthContext
+  const { user } = useContext(AuthContext)
 
   if (!user) {
-    return <p className="text-center text-xl">Loading...</p>; // Handle case where user data is not available
+    return <p className="text-center text-xl">Loading...</p>; 
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center max-sm:px-6 justify-center bg-gray-100">
       <div className="card bg-white shadow-md p-6 w-full max-w-md">
-        <h1 className="text-2xl font-bold text-center mb-6">
+        <h1 className="text-2xl font-bold text-center mb-6 text-blue-500">
           Welcome, {user.displayName || 'User'}!
         </h1>
         <div className="flex flex-col items-center">

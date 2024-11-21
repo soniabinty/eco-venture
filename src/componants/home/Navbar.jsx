@@ -33,7 +33,7 @@ const {user , logOut} =useContext(AuthContext)
 
     <div className={`md:gap-8 flex max-sm:flex-col max-sm:absolute md:text-xl duration-100 right-4 max-sm:p-3 max-sm:bg-blue-300 max-sm:text-white max-sm:rounded-sm max-sm:z-50 ${open? 'top-12':'-top-60'}`}>
    <NavLink> Home</NavLink>
-   <NavLink>Update Profile</NavLink>
+   <NavLink to={'/update'}>Update Profile</NavLink>
    {
           user && user.email ? ( 
             <NavLink onClick={logOut} className={'md:hidden'}>LogOut</NavLink>  ):( 
