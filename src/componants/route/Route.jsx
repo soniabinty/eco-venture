@@ -11,7 +11,9 @@ import AdventureDetails from "../adventure/AdventureDetails";
 
 
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  
+  [
   {
     path: "/",
     element: <Root></Root>,
@@ -35,10 +37,18 @@ const router = createBrowserRouter([
     element:<Register></Register>
   },
 
-  {
-    path:"/adventure:id",
-    element:<AdventureDetails></AdventureDetails>
+  { 
+    path: "/adventure/:id",
+     element: <AdventureDetails> </AdventureDetails> ,
+     loader:async({params}) =>{
+      const res = await fetch('/adventure.json')
+    const data = await res.json()
+    const singleData = data.find(adven =>adven.id ==params.id)
+
+    return singleData
   }
+ 
+    },
     ]
   },
 

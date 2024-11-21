@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Card = ({adventure}) => {
+const Card = ({adventure ,handleExplore}) => {
   return (
     <div
    
-    className="bg-white shadow-lg my-12 rounded-lg overflow-hidden transform transition hover:scale-105"
+    className="bg-white shadow-lg my-4 rounded-lg overflow-hidden transform transition hover:scale-105"
   >
    
     <img
@@ -29,7 +29,7 @@ const Card = ({adventure}) => {
       </ul>
 
      
-      <button className="mt-4 px-4 py-2 bg-blue-500 text-white font-medium rounded hover:bg-blue-600">
+      <button onClick={() => handleExplore(adventure.id)} className="mt-4 px-4 py-2 bg-blue-500 text-white font-medium rounded hover:bg-blue-600">
         Explore Now
       </button>
     </div>

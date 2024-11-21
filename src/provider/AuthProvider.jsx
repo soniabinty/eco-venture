@@ -11,7 +11,8 @@ const AuthProvider = ({children}) => {
 
 
   const [user,setUser] =useState(null)
-  console.log(user)
+
+ 
 
   const createNewUser =(email,password) =>{
     return createUserWithEmailAndPassword(auth, email, password);
@@ -31,6 +32,7 @@ return signOut(auth)
     createNewUser,
     logOut,
     userSignIn,
+  
   };
 
 
