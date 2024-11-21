@@ -1,5 +1,8 @@
-import React from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2'
+
+
 
 const AdventureDetails = () => 
 
@@ -9,7 +12,25 @@ const AdventureDetails = () =>
 
   const adventure = useLoaderData()
 
-  
+  const handleTalk = () =>{
+    const present = new Date
+    const currentTime = present.getHours()
+   
+   
+
+    if(currentTime >= 10 && currentTime <20){
+    window.open("https://meet.google.com")
+    }else{
+
+      Swal.fire({
+        title: "Consultation Time",
+        text: "Experts are available from 10:00 AM to 8:00 PM. Please reach out during these hours.",
+        icon: "info",
+        confirmButtonText: "Close",
+      })
+    }
+  }
+
  
   return (
     <div className="container mx-auto py-16 px-6 lg:px-20">
@@ -92,10 +113,15 @@ const AdventureDetails = () =>
 
    
       <div className="mt-16 text-center">
-        <button className="px-8 py-4 bg-blue-500 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
+        <button onClick={handleTalk} className="px-8 py-4 bg-blue-500 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
           Talk with Expert
         </button>
       </div>
+
+
+
+
+
     </div>
   );
 };
