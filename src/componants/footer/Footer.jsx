@@ -4,20 +4,20 @@ import logo from '../../assets/Picsart_24-11-20_00-21-43-451.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-cyan-50 text-blue-600 py-8">
+    <footer className="bg-cyan-50 text-blue-600 py-8 max-sm:text-center">
       <div className="container mx-auto px-4">
     
         <div className="flex flex-col md:flex-row justify-between items-center">
       
-          <div className="mb-4 md:mb-0 text-center">
+          <div className="mb-4 md:mb-0 text-center max-sm:w-4/6 max-sm:mx-auto">
            
-      <div className='flex items-center'>
-      <GiThreeLeaves className='text-green-800 md:text-4xl text-2xl' />
+
+     <img className='lg:w-[180px] md:w-[110px] w-[80px] max-sm:mx-auto ' src={logo} alt="logo"/>
    
-      <img className='lg:w-[220px] md:w-[150px] w-[80px] ' src={logo} alt="logo"/>
+      
 
      
-      </div>
+   
             <p className="text-sm text-gray-800">© {new Date().getFullYear()} EcoVenture. All rights reserved.</p>
           </div>
 

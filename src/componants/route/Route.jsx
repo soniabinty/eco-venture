@@ -16,6 +16,7 @@ import ForgetPassword from "../ForgetPassword/ForgetPassword";
 
 
 
+
 const router = createBrowserRouter(
   
   [
@@ -32,7 +33,11 @@ const router = createBrowserRouter(
    { path: "/",
     element: <Home></Home>,
     
-    loader:() =>fetch('/adventure.json')
+    loader:() =>fetch('/adventure.json'),
+
+    children:[
+     
+    ]
   },
 
 

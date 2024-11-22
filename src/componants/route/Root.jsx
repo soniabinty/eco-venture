@@ -17,6 +17,7 @@ DynamicTitle();
       <Navbar></Navbar>
      
    <Outlet></Outlet>
+  
 
    <Footer></Footer>
    <ToastContainer/>
