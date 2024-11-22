@@ -3,7 +3,7 @@ import {
 
 } from "react-router-dom";
 import Root from "./Root";
-
+import 'react-toastify/dist/ReactToastify.css';
 import Login from "../login/Login";
 import Register from '../register/Register'
 import Home from "../home/Home";
@@ -30,6 +30,7 @@ const router = createBrowserRouter(
 
    { path: "/",
     element: <Home></Home>,
+    
     loader:() =>fetch('/adventure.json')
   },
 

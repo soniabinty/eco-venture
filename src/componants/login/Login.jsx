@@ -1,23 +1,35 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import { toast } from 'react-toastify';
+import { FaGoogle } from "react-icons/fa";
+
 
 const login = () => {
-  const {userSignIn ,  setUser} = useContext(AuthContext)
+  const {userSignIn ,  setUser ,googleSignIn} = useContext(AuthContext)
 
   const navigate = useNavigate()
   const location = useLocation()
+
+  const handleGoogle =() =>{
+    googleSignIn()
+    .then((result) =>{
+      const user = result.user
+      setUser(user)
+      navigate(location?.state ? location.state : "/");
+      
+        })
+      
+  }
 
   const handleSubmit =(e) =>{
     e.preventDefault()
     const form = new FormData(e.target)
        const email = form.get("email")
     const password = form.get("password")
-    const name = form.get("name")
-    const photo = form.get("photo")
+   
 
-
-    console.log({email , password})
+   
     userSignIn(email,password)
     .then((result) =>{
   const user = result.user
@@ -25,16 +37,15 @@ const login = () => {
   navigate(location?.state ? location.state : "/");
   
     })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode,errorMessage)
+    .catch((err) => {
+     
+     toast.error("Login Failed.PLease Try Again!!")
     });
 
 
   }
   return (
-    <div className='min-h-screen justify-center py-20 flex max-sm:p-4'>
+    <div className=' justify-center py-20 flex max-sm:p-4'>
         <div className="card bg-base-100 w-full md:max-w-lg shrink-0 border shadow-2xl p-3">
           <h2 className='text-3xl text-center pt-4 font-semibold'>Login Your Account</h2>
       <form onSubmit={handleSubmit} className="card-body">
@@ -54,10 +65,22 @@ const login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button  className="btn btn-primary text-white">Login</button>
         </div>  
            <p className='text-center text-lg mt-4'>Don't Have an Account? <Link className='text-red-400' to={'/register'}>Register</Link></p>
+
+
       </form>
+
+
+      <div className="flex flex-col mb-6 px-8">
+          <button
+          onClick={handleGoogle}
+            className="btn btn-primary text-white w-full mt-4 flex"
+          > <FaGoogle />
+            Login with Google
+          </button>
+        </div>
  
     </div>
       

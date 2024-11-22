@@ -1,27 +1,14 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import Card from '../Card/Card'
-import { useContext } from "react";
-import { AuthContext } from "../../provider/AuthProvider";
+import { useState } from "react";
+
 
 
 const Experiences = () => {
   const adventures = useLoaderData();
-  const navigate = useNavigate();
-  const { user } = useContext(AuthContext);
+  const [showAll, setShowAll] = useState(false);
+  const displayedAdventures = showAll ? adventures : adventures.slice(0, 6);
  
-//   const handleExplore = (id) =>{
-
-//     if(user){
-//       navigate(`/adventure/${id}`)
-//     } 
-//     else{
-
-// navigate('/login')
-
-//     }
-
-//   }
-
   
 
 
@@ -38,10 +25,19 @@ const Experiences = () => {
     
    <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-8 gap-4 px-4">
   
-      {adventures.map((adventure) => (
+      {displayedAdventures.map((adventure) => (
         <Card key={adventure.id} adventure={adventure}  />
       ))}
    </div>
+   {showAll ? "" : 
+   <div className="text-center mt-8">
+        <button
+          className="bg-blue-500 p-3 rounded-lg text-white font-semibold"
+          onClick={() => setShowAll(!showAll)}
+        >
+          View All
+        </button>
+      </div>}
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Card = ({adventure }) => {
 
 
-  console.log(adventure)
   return (
     <div
    

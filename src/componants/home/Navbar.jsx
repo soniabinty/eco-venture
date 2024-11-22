@@ -12,7 +12,7 @@ const {user , logOut} =useContext(AuthContext)
   return (
     
 
-     <div className='flex justify-between w-11/12 mx-auto md:mt-6 mt-2 md:px-8 px-2 items-center rounded-t-2xl'>
+     <div className='flex justify-between w-11/12 mx-auto md:mt-6 mt-2 lg::px-8 px-2 items-center rounded-t-2xl'>
 
       <div className='flex items-center'>
       <GiThreeLeaves className='text-green-800 md:text-4xl text-2xl' />
@@ -23,7 +23,26 @@ const {user , logOut} =useContext(AuthContext)
       </div>
 
 
-      <div className=' text-blue-400 gap-5'>
+
+      <div className=' text-blue-400 gap-5 flex items-center'>
+        
+      <div className="relative group md:hidden">
+  {user?.photoURL ? (
+    <img
+      className="w-9 h-9 rounded-full border-2 border-blue-600"
+      src={user.photoURL}
+      alt="profile"
+    />
+  ) : (
+    <div className="w-9 h-9 rounded-full border-2 border-blue-600 bg-gray-200"></div>
+  )}
+  {user?.displayName && (
+    <div className="absolute left-1/2 transform -translate-x-1/2 top-14 bg-gray-700 text-white text-sm px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      {user.displayName}
+    </div>
+  )}
+</div>
+
     <div className='md:hidden' onClick={() => setOpen(!open)}>
       {
       open === true?<IoMdClose />:<IoMdMenu />
@@ -46,12 +65,29 @@ const {user , logOut} =useContext(AuthContext)
       </div>
 
 
-      <div className='max-sm:hidden'>
+      <div className='max-sm:hidden flex gap-3 items-center'>
+
+      <div className="relative group">
+  {user?.photoURL ? (
+    <img
+      className="w-12 h-12 rounded-full border-2 border-blue-600"
+      src={user.photoURL}
+      alt="profile"
+    />
+  ) : (
+    <div></div>
+  )}
+  {user?.displayName && (
+    <div className="absolute left-1/2 transform -translate-x-1/2 top-14 bg-gray-700 text-white text-sm px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      {user.displayName}
+    </div>
+  )}
+</div>
 
         {
-          user && user.email ? (<Link onClick={logOut}  className='btn bg-blue-400 p-3 font-bold rounded-lg text-cyan-100'>
+          user && user.email ? (<Link onClick={logOut}  className=' bg-blue-400 p-3 font-bold rounded-lg text-cyan-100'>
             LogOut
-          </Link>):(<Link to={'/login'} className='btn bg-blue-400 p-3 font-bold rounded-lg text-cyan-100'>
+          </Link>):(<Link to={'/login'} className=' bg-blue-400 p-3 font-bold rounded-lg text-cyan-100'>
           Login
         </Link>)
         }

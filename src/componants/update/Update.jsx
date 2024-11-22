@@ -16,14 +16,14 @@ const Update = () => {
     if (user) {
       updateProfile(user, { displayName: name, photoURL })
         .then(() => {
-          console.log('Profile updated successfully');
+       
           navigate('/myprofile')
         })
         .catch((error) => {
-          console.error('Error updating profile:', error.message);
+        
         });
     } else {
-      console.error('No user is logged in.');
+     
     }
   };
 
