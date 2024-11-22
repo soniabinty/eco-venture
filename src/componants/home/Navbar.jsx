@@ -17,7 +17,7 @@ const {user , logOut} =useContext(AuthContext)
       <div className='flex items-center'>
       <GiThreeLeaves className='text-green-800 md:text-4xl text-2xl' />
    
-      <img className='lg:w-[220px] md:w-[180px] w-[80px]' src={logo} alt="logo"/>
+      <img className='lg:w-[220px] md:w-[150px] w-[80px] ' src={logo} alt="logo"/>
 
      
       </div>
@@ -51,16 +51,60 @@ const {user , logOut} =useContext(AuthContext)
     </div>
 
     <div className={`md:gap-8 flex max-sm:flex-col max-sm:absolute md:text-xl duration-100 right-4 max-sm:p-3 max-sm:bg-blue-300 max-sm:text-white max-sm:rounded-sm max-sm:z-50 ${open? 'top-12':'-top-60'}`}>
-   <NavLink> Home</NavLink>
-   <NavLink to={'/update'}>Update Profile</NavLink>
-   {
-          user && user.email ? ( 
-            <NavLink onClick={logOut} className={'md:hidden'}>LogOut</NavLink>  ):( 
-   <NavLink  to={'/login'} className={'md:hidden'}>Login</NavLink>  )
-        }
-  
+    <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `py-2 px-3 rounded-md ${
+                isActive ? ' font-bold bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-800'
+              }`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/update"
+            className={({ isActive }) =>
+              `py-2 px-3 rounded-md ${
+                isActive ? ' font-bold bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-800'
+              }`
+            }
+          >
+            Update Profile
+          </NavLink>
+          {user && user.email ? (
+            <NavLink
+              onClick={logOut}
+              className={({ isActive }) =>
+                `md:hidden py-2 px-3 rounded-md ${
+                  isActive ?  'font-bold bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-800'
+                }`
+              }
+            >
+              LogOut
+            </NavLink>
+          ) : (
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                `md:hidden py-2 px-3 rounded-md ${
+                  isActive ? ' font-bold bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-800'
+                }`
+              }
+            >
+              Login
+            </NavLink>
+          )}
  
-   <NavLink to={'/myprofile'} >My profile</NavLink>  
+ <NavLink
+            to="/myprofile"
+            className={({ isActive }) =>
+              `py-2 px-3 rounded-md ${
+                isActive ? ' font-bold bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-800'
+              }`
+            }
+          >
+            My Profile
+          </NavLink>
 </div>
       </div>
 
