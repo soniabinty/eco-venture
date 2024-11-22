@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { toast } from 'react-toastify';
 import { FaGoogle } from "react-icons/fa";
+import { sendPasswordResetEmail } from 'firebase/auth';
 
 
 const login = () => {
@@ -10,6 +11,8 @@ const login = () => {
 
   const navigate = useNavigate()
   const location = useLocation()
+  const emailRef =useRef()
+  const [email, setEmail] = useState('');
 
   const handleGoogle =() =>{
     googleSignIn()
@@ -27,6 +30,8 @@ const login = () => {
     const form = new FormData(e.target)
        const email = form.get("email")
     const password = form.get("password")
+    setEmail(email)
+   
    
 
    
@@ -44,6 +49,18 @@ const login = () => {
 
 
   }
+
+  const handleForget = () =>{
+ 
+    email = emailRef.current.value
+
+    if(!email){
+      toast.error("Please Provide an Email!!")
+    }else{
+      sendPasswordResetEmail(auth,email)
+      .then
+    }
+  }
   return (
     <div className=' justify-center py-20 flex max-sm:p-4'>
         <div className="card bg-base-100 w-full md:max-w-lg shrink-0 border shadow-2xl p-3">
@@ -53,16 +70,16 @@ const login = () => {
           <label className="label">
             <span className="label-text text-xl">Email</span>
           </label>
-          <input name='email' type="email" placeholder="email" className="input input-bordered" required />
+          <input name='email' type="email" onChange={(e) => setEmail(e.target.value)} placeholder="email" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text text-xl">Password</span>
           </label>
           <input name='password' type="password" placeholder="password" className="input input-bordered" required />
-          <label className="label">
+          <Link to={'/forget'} className="label">
             <a href="#" className="label-text-alt link link-hover text-lg">Forgot password?</a>
-          </label>
+          </Link>
         </div>
         <div className="form-control mt-6">
           <button  className="btn btn-primary text-white">Login</button>

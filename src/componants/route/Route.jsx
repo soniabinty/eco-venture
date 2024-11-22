@@ -12,6 +12,7 @@ import Error from "../Error/Error";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import MyProfile from "../myProfile/MyProfile";
 import Update from '../update/Update'
+import ForgetPassword from "../ForgetPassword/ForgetPassword";
 
 
 
@@ -39,10 +40,18 @@ const router = createBrowserRouter(
     path:"/login",
     element:<Login></Login>
   },
+
+  
   {
     path:"/register",
     element:<Register></Register>
   },
+
+  {
+    path:"/forget",
+    element:<ForgetPassword></ForgetPassword>
+  },
+
 
   {
     path: "/adventure/:id",
