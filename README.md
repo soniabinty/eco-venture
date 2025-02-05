@@ -2,7 +2,8 @@
 
 
 ![Ecoventure Banner](https://i.ibb.co.com/Z6hrXNM7/jhgjh.png)
-<p id="description">🌍 Overview EcoVenture is a cutting-edge adventure platform designed to help thrill-seekers find explore and book their dream experiences. Whether you're into hiking skydiving scuba diving or any other adventure this platform connects you with the right experiences tailored to your preferences. With seamless navigation real-time consultations with experts and a user-friendly booking system EcoVenture transforms the way people discover and embark on adventures. 🔹 Find your perfect adventure. Plan with confidence. Explore without limits.</p>
+
+**EcoVenture**  is a cutting-edge adventure platform designed to help thrill-seekers find explore and book their dream experiences. Whether you're into hiking skydiving scuba diving or any other adventure this platform connects you with the right experiences tailored to your preferences. With seamless navigation real-time consultations with experts and a user-friendly booking system EcoVenture transforms the way people discover and embark on adventures. 🔹 Find your perfect adventure. Plan with confidence. Explore without limits.
 
 <h2>🚀 Demo</h2>
 
