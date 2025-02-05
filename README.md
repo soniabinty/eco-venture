@@ -5,12 +5,14 @@
 
 **EcoVenture**  is a cutting-edge adventure platform designed to help thrill-seekers find explore and book their dream experiences. Whether you're into hiking skydiving scuba diving or any other adventure this platform connects you with the right experiences tailored to your preferences. With seamless navigation real-time consultations with experts and a user-friendly booking system EcoVenture transforms the way people discover and embark on adventures. 🔹 Find your perfect adventure. Plan with confidence. Explore without limits.
 
-<h2>🚀 Demo</h2>
+🚀 **Live Demo:** [Ecoventure](https://eco-venture-5e197.web.app)
 
-[https://eco-venture-5e197.web.app/](https://eco-venture-5e197.web.app
+## ✨ Features
 
-
-## key Features:
+- **Adventure Exploration** – Discover exciting adventure options based on your interests.
+- **Detailed Information** – Get comprehensive details with just one click on "Explore More.
+- **Expert Consultation** – Get comprehensive details with just one click on "Explore More"
+- **Transparent Pricing** –  View costs upfront before booking your adventure.
 
 - It helps a person to explore adventure.
 - Details information Will be show after clicking Explore moRE.
